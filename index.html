@@ -1810,7 +1810,7 @@ li[data-type="control_image"] img {
         </label>
         <div id="cid_35" class="form-input-wide jf-required">
           <div style="width:100%; text-align:Left;">
-            <iframe onload="widgetFrameLoaded(35)" frameborder="0" scrolling="no" allowTransparency="true" data-type="iframe" class="custom-field-frame" id="customFieldFrame_35" src="" style="border:none;width:650px;height:160px;" data-width="650" data-height="160">
+            <iframe onload="widgetFrameLoaded(35)" name="guestFrame" frameborder="0" scrolling="no" allowTransparency="true" data-type="iframe" class="custom-field-frame" id="customFieldFrame_35" src="" style="border:none;width:650px;height:160px;" data-width="650" data-height="160">
             </iframe>
             <div class="widget-inputs-wrapper">
               <input id="input_35" class="form-hidden form-widget widget-required " type="hidden" name="q35_chooseWhich35" value="" />
@@ -2610,6 +2610,16 @@ li[data-type="control_image"] img {
   </script>
   <script src="https://cdn.jotfor.ms/js/widgetResizer.js?REV=3.3.11210" type="text/javascript"></script>
   <input type="hidden" class="form-hidden" value="8" id="input_77" name="q77_submissionNumber77" />
-</form></body>
+</form>
+
+  <script type="text/javascript" src="js/porthole.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#customFieldFrame_35").contents().find(".body").bind("mouseup", function() { alert("Hello"); });
+    });
+  </script>
+
+</body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
